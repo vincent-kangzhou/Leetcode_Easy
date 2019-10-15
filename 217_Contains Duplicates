@@ -1,0 +1,14 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(nums)!=len(set(nums))
+        
+        
+        
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        mapping={}
+        for i in nums:
+            if i in mapping:
+                return True
+            else mapping[i]=True
+        return False
