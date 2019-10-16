@@ -1,0 +1,29 @@
+class Solution:
+    def isPowerOfFour(self, num: int) -> bool:
+        if num<=0:
+            return False
+        if num==1: return True
+        if num%4!=0:
+            return False
+        num=num//4
+        return self.isPowerOfFour(num)
+        
+        
+class Solution:
+    def isPowerOfFour(self, num: int) -> bool:
+        if num<=0:
+            return False
+        while num%4==0:
+            num=num//4
+        return num==1
+        
+        
+class Solution:
+    def isPowerOfFour(self, num: int) -> bool:
+        nums = [1, 4, 16, 64, 256, 1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216, 67108864, 268435456, 1073741824]
+        return num in nums
+        
+        
+class Solution:
+    def isPowerOfFour(self, num: int) -> bool:
+        return num>=0 and bin(num).count('1')==1 and bin(num).count('0')%2==1
